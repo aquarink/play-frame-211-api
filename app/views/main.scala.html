@@ -1,0 +1,35 @@
+@(content: Html)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Computers database</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")"> 
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")"> 
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/jquery-ui.css")"> 
+    </head>
+    <body>
+        
+        <header class="topbar">
+            <h1 class="fill">
+                <a href="@routes.Application.index()">
+                    Play 2.0 sample application &mdash; Computer database
+                </a>
+            </h1>
+        </header>
+        
+        <section id="main">
+            @content
+        </section>
+        
+        <script src="@routes.Assets.at("javascripts/jquery-1.12.4.js")"></script>
+        <script src="@routes.Assets.at("javascripts/jquery-ui.js")"></script>
+        <script>
+		  $( function() {
+		    $( "#dp1" ).datepicker();
+		    $( "#dp2" ).datepicker();
+		  } );
+		</script>
+        
+    </body>
+</html>
